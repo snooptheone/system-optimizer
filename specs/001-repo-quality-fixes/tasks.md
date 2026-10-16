@@ -131,7 +131,7 @@ The highest-severity audit finding is a documentation gap, so it goes first. It 
 
 - [X] T051 Run the full `quickstart.md` command list and confirm each expected outcome
 - [X] T052 Remove the "Sync Impact Report" comment block at the top of `.specify/memory/constitution.md`
-- [ ] T053 Review `git status`; commit in logical groups (lint, CI, restore, docs, probes, shared helpers, tests, spec-kit scaffold) without attribution lines. Per constitution (Development Workflow) the structural refactor (US7 shared helpers: lib.sh extraction and sourcing) MUST be its own commit(s), separate from behavior fixes (US7 NVMe, SSH rule, governor, PUA; US3; US6); order them so the refactor commit is verified output-identical with the T001 `compare.py` rule before any behavior-fix commit
+- [X] T053 Review `git status`; commit in logical groups (lint, CI, restore, docs, probes, shared helpers, tests, spec-kit scaffold) without attribution lines. Per constitution (Development Workflow) the structural refactor (US7 shared helpers: lib.sh extraction and sourcing) MUST be its own commit(s), separate from behavior fixes (US7 NVMe, SSH rule, governor, PUA; US3; US6); order them so the refactor commit is verified output-identical with the T001 `compare.py` rule before any behavior-fix commit
 
 ## Dependencies & Order
 
