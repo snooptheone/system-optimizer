@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # system-probe.sh - Probes Windows & Linux system configuration and performance parameters
 set -euo pipefail
+ci_negative_test_unused=1
 
 LIB="$(dirname "${BASH_SOURCE[0]}")/lib.sh"
 if [[ ! -f "$LIB" ]]; then
