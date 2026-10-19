@@ -35,4 +35,10 @@ if [[ "$failed" -ne 0 ]]; then
   exit 1
 fi
 echo "ok   - all $count targets run to the end without errors"
+# a bare "--icons" in a recommended alias breaks "ls <path>" on recent eza (the path becomes the option's value)
+if grep -rnE -- '--icons([^=a-z]|$)' "$ROOT/scripts" "$ROOT/references" "$ROOT/SKILL.md" "$ROOT/README.md" >&2; then
+  echo "FAIL - a recommendation uses --icons without a value; write --icons=auto" >&2
+  exit 1
+fi
+echo "ok   - eza aliases are recommended as --icons=auto"
 echo "inspect-smoke: $count targets passed"
